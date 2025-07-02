@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://9.30.92.227/isam/sps/SpringIdp/saml20">
+    <md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+        <md:KeyDescriptor use="signing">
+            <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+                <X509Data>
+                    <X509Certificate>MIIDGDCCAgCgAwIBAgIIEytDzFzf0N4wDQYJKoZIhvcNAQELBQAwKjELMAkGA1UEBhMCdXMxDDAKBgNVBAoTA2libTENMAsGA1UEAxMEaXNhbTAeFw0yNTAxMDYxMzE2MDVaFw0zNTAxMDUxMzE2MDVaMCoxCzAJBgNVBAYTAnVzMQwwCgYDVQQKEwNpYm0xDTALBgNVBAMTBGlzYW0wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCnazEb8JMjQJflTvLQ0VL5jZUiHEnZltzUchrjZ81khKTIxFRNB6wbqYOlUZNf8hgvIqwm+Vng1Abne2IM8rhLJCjiXRs7QFFBnPHIZTr4MG5ozcSb/F2fLGdB2Fxpa7ifsuBFdQYJjowPnlw5ouAN6a0R18OpWvtYz5wZIsqbAXc1/4mVvD4GN1+WYGBpBH2wF/s/UKc/1HHjYgMZVE7IcO8DjHCYhadUrO11GoR5K6UaWlvdJyoRpytINHBMeqlpyUGu/OdliyK94FEfhhouI1Tgbms9swRMg2rOb8tCxQdjbhSk/71eC2aFBsEHCbYTa8C6niUJd3ZDccwJp++XAgMBAAGjQjBAMB0GA1UdDgQWBBQsdEfJ9NP4bnJi0klz7UK6xhr1zzAfBgNVHSMEGDAWgBQsdEfJ9NP4bnJi0klz7UK6xhr1zzANBgkqhkiG9w0BAQsFAAOCAQEAeSs8zVw9ihepiigytNcSDJeFDIh+NgxyIuzbqu19g6nE70RNsfo1XMsQm8SxZownkZlCQcczZnPdl8r0UNrRmkHbyy8D2boPgVXq7ehv0wO6IGt7UxvGbC7S4ZJO7+0nCTWk4nhs4BmXheYUECks053JpxQAG54Cwihz86ITnTRLvU1N/sLPDNAtB6/ToHA32L/i3Rbk9nsg+mSt/4Xkw6yK54zunKTAp7ESGqnxyPEg99B3zJBQHmn1+RGnyyQgqa6TD10IhsoapFngcU5PcujIQvSeF2/N5xvRtA8M+tfJPl6cZFYZQ1hCD7gVFecKepzEzLvN7uPe/b86XF76/A==</X509Certificate>
+                </X509Data>
+            </KeyInfo>
+        </md:KeyDescriptor>
+        <md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://9.30.92.227/isam/sps/SpringIdp/saml20/soap" index="0" isDefault="true"/>
+        <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+        <md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</md:NameIDFormat>
+        <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+        <md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</md:NameIDFormat>
+        <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://9.30.92.227/isam/sps/SpringIdp/saml20/login"/>
+        <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://9.30.92.227/isam/sps/SpringIdp/saml20/login"/>
+    </md:IDPSSODescriptor>
+    <md:Organization>
+        <md:OrganizationName xml:lang="en">MkSpring</md:OrganizationName>
+        <md:OrganizationDisplayName xml:lang="en">MkSpring</md:OrganizationDisplayName>
+        <md:OrganizationURL xml:lang="en"/>
+    </md:Organization>
+</md:EntityDescriptor>
