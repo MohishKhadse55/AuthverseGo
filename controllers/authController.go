@@ -108,7 +108,7 @@ func OIDCCallback(c *gin.Context) {
 	ctx := context.Background()
 	code := c.Query("code")
 
-	// ✅ Use custom HTTP client to trust ISVA certificate
+	// Use custom HTTP client to trust ISVA certificate
 	token, err := services.OidcConfig.Exchange(
 		oidc.ClientContext(ctx, services.GetInsecureClient()),
 		code,
@@ -139,7 +139,7 @@ func OIDCCallback(c *gin.Context) {
 		return
 	}
 
-	// ✅ Set session or cookie
+	// Set session or cookie
 	c.SetCookie("session_user", claims.Email, 3600, "/", "", false, true)
 	c.Redirect(http.StatusFound, "/api/v1/home")
 }
