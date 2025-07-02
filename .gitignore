@@ -1,5 +1,5 @@
 saml-test-mohish-Mohishs-MacBook-Pro.local.xml
 .env
 go.sum
-./services/fed_idp_Metadata.xml
+services/fed_idp_Metadata.xml
 goCert.cer
