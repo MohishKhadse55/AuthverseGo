@@ -30,7 +30,7 @@ func GetInsecureClient() *http.Client {
 	return &http.Client{
 		Transport: &http.Transport{
 			TLSClientConfig: &tls.Config{
-				InsecureSkipVerify: true, // ⛔ Do NOT use in production
+				InsecureSkipVerify: true,
 			},
 		},
 	}
@@ -70,13 +70,13 @@ func SetupOIDC() error {
 		Scopes: []string{"openid", "profile", "email"},
 	}
 
-	// ✅ 3. Set up ID token verifier with trusted HTTP client
+	//  3. Set up ID token verifier with trusted HTTP client
 	ctx = oidc.ClientContext(ctx, client)
 	keySet := oidc.NewRemoteKeySet(ctx, metadata.JWKSURI)
 	Verifier = oidc.NewVerifier(metadata.Issuer, keySet, &oidc.Config{
 		ClientID: clientID,
 	})
 
-	log.Println("✅ OIDC setup completed with ISVA manual metadata")
+	log.Println("OIDC setup completed with ISVA manual metadata")
 	return nil
 }
